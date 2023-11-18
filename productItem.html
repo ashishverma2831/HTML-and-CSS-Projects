@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Item</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+        .product-container{
+            padding: 18px;
+        }
+        .container{
+            width: 90%;
+            margin:150px auto;
+            padding: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background-color: palegoldenrod;
+            justify-content: space-evenly;
+        }
+        .product-container{
+            width: 200px;
+            text-align: center;
+            height: 400px;
+            /* background-color: red; */
+        }
+        img{
+            width: 100%;
+            display: block;
+            border-radius: 4px;
+        }
+        .primary-view{
+            /* background-color: red; */
+            transform: translateY(100px);
+            position: relative;
+            z-index: 1;
+            /* opacity: 0.6; */
+            transition: 0.5s;
+        }
+        .secondary-view{
+            transform: translateY(-80px);
+            /* opacity: 0.1; */
+            transition: 0.5s;
+        } 
+        .product-container:hover .primary-view{
+            transform: translateY(0px);
+            /* opacity: 1; */
+        }
+        .product-container:hover .secondary-view{
+            transform: translateY(0px);
+            /* opacity: 1; */
+        }
+        button{
+            cursor: pointer;
+            margin: 32px 0;
+            padding: 2px 4px;
+        }
+        .product-container:hover button{
+            transform: translateY(-20px);
+            transition: ease-in-out 0.5;
+        }
+        .product-name{
+            margin: 8px;
+        }
+        h1{
+            text-align: center;
+            transform: translateY(80px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Items</h1>
+    <section class="container">
+        <div class="product-container">
+           <div class="primary-view">
+                <img src="shoe1.jpeg" alt="shoe-pic" srcset="">
+                <div class="product-name">Nike</div>
+           </div>
+            <div class="product-info">
+                <div class="secondary-view">
+                    <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing sit inventore cum necessitatibus minus! Esse debitis accusamus fugiat modi minima? Necessitatibus quis quidem error rerum.</p>
+                    <button>Add Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-container">
+            <div class="primary-view">
+                 <img src="shoe1.jpeg" alt="shoe-pic" srcset="">
+                 <div class="product-name">Nike</div>
+            </div>
+             <div class="product-info">
+                 <div class="secondary-view">
+                     <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing sit inventore cum necessitatibus minus! Esse debitis accusamus fugiat modi minima? Necessitatibus quis quidem error rerum.</p>
+                     <button>Add Cart</button>
+                 </div>
+             </div>
+         </div>
+         <div class="product-container">
+            <div class="primary-view">
+                 <img src="shoe1.jpeg" alt="shoe-pic" srcset="">
+                 <div class="product-name">Nike</div>
+            </div>
+             <div class="product-info">
+                 <div class="secondary-view">
+                     <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing sit inventore cum necessitatibus minus! Esse debitis accusamus fugiat modi minima? Necessitatibus quis quidem error rerum.</p>
+                     <button>Add Cart</button>
+                 </div>
+             </div>
+         </div>
+         <div class="product-container">
+            <div class="primary-view">
+                 <img src="shoe1.jpeg" alt="shoe-pic" srcset="">
+                 <div class="product-name">Nike</div>
+            </div>
+             <div class="product-info">
+                 <div class="secondary-view">
+                     <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing sit inventore cum necessitatibus minus! Esse debitis accusamus fugiat modi minima? Necessitatibus quis quidem error rerum.</p>
+                     <button>Add Cart</button>
+                 </div>
+             </div>
+         </div>
+    </section>
+</body>
+</html>

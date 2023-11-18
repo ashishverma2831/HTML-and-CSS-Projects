@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background:lightcyan;
+            padding: 12vh;
+        }
+        .card-container{
+            height: 420px;
+            width: 260px;
+            padding: 4vh;
+            background-color: white;
+            /* border: 2px solid black; */
+            box-shadow:0 2px 10px 2px black;
+            border-radius: 12px;
+            margin: 12px 0;
+        }
+        .card-name{
+            font-size: 2em;
+            text-align: center;
+        }
+        .card-price{
+            text-align: center;
+            font-size: 32px;
+            margin:12px
+        }
+        #a,#b{
+            width: 100%;
+            background-color: darkcyan;
+            padding: 0.8em;
+            border: none;
+            outline: none;
+            color: white;
+            font-weight: 400;
+            border-radius: 6px;
+            cursor: pointer;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+        #b{
+            background: white;
+            color: darkcyan;
+            transform: translateY(12px);
+        }
+        #a:hover{
+            background: rgb(0, 56, 56);
+        }
+        #b:hover{
+            background: rgb(0, 56, 56);
+            color: white;
+        }
+        .adept{
+            background: darkcyan;
+            color: white;
+            height: 450px;
+            transform: translateY(-15px);
+            z-index: 1;
+            cursor: pointer;
+        }
+        .adept:hover{
+            transform: scale(1.1) translateY(-12px);
+        }
+        div{
+            text-align: center;
+            font-size: 18px;
+        }
+        hr{
+            height: 2px;
+            margin: 20px 0;
+            background-color: black;
+            outline: none;
+            border: none;
+        }
+        .h{
+            background-color: white;
+        }
+        .h:hover{
+            transform: scale(1.2) translateY(0px);
+            z-index: 10;
+        }
+        .f>hr{
+            background-color: white;
+            margin: 22px 0;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width:720px) {
+            .adept{
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card-container h">
+            <div class="card-details">
+                <div class="card-name">Basic</div>
+                <div class="card-price"><sup>$</sup><b>19.99</b></div>
+                <hr>
+                <div class="card-storage">100 GB</div>
+                <hr>
+                <div class="card-features">2 Users</div>
+                <hr>
+                <div class="card-description">Send To More People</div>
+                <hr>
+                <button id="a" type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+
+        <div class="card-container adept">
+            <div class="card-details f">
+                <div class="card-name">Adept</div>
+                <div class="card-price"><sup>$</sup><b>99.99</b></div>
+                <hr>
+                <div class="card-storage">1000 GB</div>
+                <hr>
+                <div class="card-features">50 Users</div>
+                <hr>
+                <div class="card-description">Send To More People</div>
+                <hr>
+                <button id="b" type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+
+        <div class="card-container h">
+            <div class="card-details">
+                <div class="card-name">Intermediate</div>
+                <div class="card-price"><sup>$</sup><b>29.99</b></div>
+                <hr>
+                <div class="card-storage">500 GB</div>
+                <hr>
+                <div class="card-features">5 Users</div>
+                <hr>
+                <div class="card-description">Send To More People</div>
+                <hr>
+                <button id="a" type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<!-- git config --global user.email "you@example.com"
+git config --global user.name "Your Name" -->

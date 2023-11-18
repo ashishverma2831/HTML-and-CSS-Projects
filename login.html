@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            background-image: url(https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=868&q=80);
+            height: 100vh;
+            width: 100vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: grid;
+            place-items: center;
+        }
+        .form{
+            height: 45vh;
+            width: 28vw;
+            background-color: rgba(0,0,0,0.254);
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            /* opacity: 0.4; */
+            padding: 24px 32px;
+            box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
+        }   
+        /* .form:hover{
+            transform: scale(1.2);
+        } */
+        h1{
+            color: white;
+            text-align: center;
+            transition: 2s;
+        }
+        h1:hover{
+            letter-spacing: 24px;
+            transition: 2s;
+        }
+        #btn{
+            padding: 6px 12px;
+            border-radius: 8px;
+            background-color:#141e30;
+            outline: none;
+            /* border: 1.6px solid white; */
+            cursor: pointer;
+            color:white;
+            font-weight: 400;
+        }
+        .button{
+            /* background-color: red; */
+            padding: 16px 0;
+            display: grid;
+            place-items: center;
+        }
+        /* #btn:hover{
+            color: #141e30;
+            background-color: white;
+            font-weight: 800;
+            border-radius: 8px; 
+            outline: none;   
+        } */
+        #btn:hover{
+            /* border: 2px solid white; */
+            transform: scale(1.15);
+            transition: 0.3s;
+        }
+        #input{
+            outline: none;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 2px solid #141e30;
+            margin:18px 0;
+            width: 100%;
+            background: transparent;
+            padding: 8px 0;
+            text-indent: 4px;
+            color: white;
+        }
+        #input:hover{
+            transform: scale(1.12);
+            border-bottom: 2px solid white;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <h1>Login</h1>
+            <input id="input" type="text" placeholder="username" required autofocus><br>
+            <input id="input" type="password" placeholder="password" required><br>
+            <div class="button">
+                <button id="btn" type="sub">login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

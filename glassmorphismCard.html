@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://images.unsplash.com/photo-1683667308908-894ed24f9ed8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI3fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            /* background-size: cover; */
+            background-position: center;
+            background-repeat: repeat;
+            display: grid;
+            place-items: center;
+            /* i know background repeat p h...pata h bhaiya mujhe bhi */
+        }
+
+        .card {
+            height: 220px;
+            width: 400px;
+            padding: 16px;
+
+            /* border: 2px solid; */
+            /* backdrop-filter: blur(10px); */
+
+            /* backdrop-filter:blur(5px);
+            background-color: rgba(255,255,255,.2); */
+
+            /* Keyword value */
+            /* backdrop-filter: none; */
+
+            /* URL to SVG filter */
+            /* backdrop-filter: url(commonfilters.svg#filter); */
+
+            /* <filter-function> values */
+            /* backdrop-filter: blur(22px); */
+            /* backdrop-filter: brightness(160%); */
+            /* backdrop-filter: contrast(40%); */
+            /* backdrop-filter: drop-shadow(4px 4px 10px blue); */
+            /* backdrop-filter: grayscale(30%); */
+            /* backdrop-filter: hue-rotate(120deg); */
+            /* backdrop-filter: invert(16%); */
+            /* backdrop-filter: opacity(80%); */
+            /* backdrop-filter: sepia(90%); */
+            /* backdrop-filter: saturate(20%); */
+
+            /* Multiple filters */
+            /* backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%); */
+
+            /* Global values */
+            /* backdrop-filter: inherit;
+            backdrop-filter: initial;
+            backdrop-filter: revert;
+            backdrop-filter: revert-layer;
+            backdrop-filter: unset; */
+
+            overflow: hidden;
+            cursor: pointer;
+            /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+            /* background: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff); */
+            /* opacity: 0.3; */
+            /* box-shadow: rgba(255,255,255,0.4) 2px; */
+
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+            box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            height: 400px;
+            width: 80px;
+            transform: translate(-120px, -150px) rotate(20deg);
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: 0.5s;
+        }
+
+        .card:hover::before {
+            transform: translate(500px, 0px) rotate(20deg);
+            transition: 0.5s;
+        }
+
+        #bank-name,
+        #a {
+            line-height: 1.8;
+        }
+
+        #name {
+            font-size: 12px;
+            transform: translateY(-5px);
+        }
+
+        .top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: gray; */
+        }
+
+        #card-number {
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 1.8px;
+            word-spacing: 4px;
+            margin-top: 28px;
+        }
+
+        .valid {
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            /* background-color: red; */
+            align-items: center;
+        }
+
+        #b {
+            font-size: 18px;
+            margin-left: 8px;
+            letter-spacing: 1.5px;
+        }
+
+        .card-holder {
+            padding: 8px 18px;
+            /* margin-top: 12px; */
+        }
+
+        .card-holder-name {
+            letter-spacing: 2px;
+        }
+
+        .crn {
+            letter-spacing: 2px;
+            word-spacing: 12px;
+            display: flex;
+            transform: translateX(-6px);
+        }
+
+        sub {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top">
+                <div class="bank">
+                    <p id="bank-name"><b>Kotak</b></p>
+                    <p id="name">kotak Mahindra Bank</p>
+                </div>
+                <p id="a"><b>#DREAM</b>DIFFERENT</p>
+            </div>
+            <p id="card-number">3451 1234 2348 5111</p>
+            <div class="valid">
+                <p>VALID <br>
+                    THRU</p>
+                <P id="b">02/26</P>
+            </div>
+            <div class="card-holder">
+                <p class="card-holder-name">RIYA VERMA</p>
+            </div>
+            <div class="crn">
+                <p><sub>crn</sub></p>
+                <p>830024748 KOTAK 811</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
