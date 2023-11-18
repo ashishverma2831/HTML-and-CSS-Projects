@@ -1,2 +1,2 @@
 # HTML-and-CSS-Projects
-![card](./images/Capture.png)
+![card](./images/Capture.PNG)
